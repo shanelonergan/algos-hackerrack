@@ -45,13 +45,16 @@ function getDistanceMetrics(arr) {
 
       if (num1 === num2) {
         const distance = Math.abs(index1 - index2)
-        console.log(distance)
         distanceTotal += distance
       }
     }
 
-    console.log(distanceTotal)
     distanceMetrics[index1] = distanceTotal
   }
 
+  console.log(distanceMetrics)
+  return distanceMetrics
+
 }
+
+getDistanceMetrics([1, 2, 3, 1, 5, 1])
