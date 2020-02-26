@@ -31,5 +31,27 @@ function closedPaths(number) {
 
 }
 
-closedPaths(630)
+// closedPaths(630)
 
+function getDistanceMetrics(arr) {
+  let distanceMetrics = []
+  
+  for (let index1 = 0; index1 < arr.length; index1++) {
+    const num1 = arr[index1]
+    let distanceTotal = 0
+
+    for (let index2 = 0; index2 < arr.length; index2++) {
+      const num2 = arr[index2]
+
+      if (num1 === num2) {
+        const distance = Math.abs(index1 - index2)
+        console.log(distance)
+        distanceTotal += distance
+      }
+    }
+
+    console.log(distanceTotal)
+    distanceMetrics[index1] = distanceTotal
+  }
+
+}
